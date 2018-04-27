@@ -49,6 +49,7 @@ public enum LayoutStrategy {
         }
     };
 
+    //Definicao do metodo abstrato adjust. Vale para todos os itens da enumeracao
     public abstract void adjust(List<Component> components, Panel panel);
 
 }

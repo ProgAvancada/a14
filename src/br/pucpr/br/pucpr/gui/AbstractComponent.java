@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 /**
- * Implementacao padrao do componente grafico. Ja inclui as coordenadas de tela e teste se o componente está "hovered".
+ * Implementacao padrao do componente grafico. Ja inclui as coordenadas de tela e teste se o componente esta "hovered".
  */
 public abstract class AbstractComponent implements Component {
     protected int x, y, w, h;
