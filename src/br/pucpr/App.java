@@ -1,5 +1,6 @@
 package br.pucpr;
 
+import br.pucpr.br.pucpr.gui.Button;
 import br.pucpr.br.pucpr.gui.Checkbox;
 import br.pucpr.br.pucpr.gui.LayoutStrategy;
 import br.pucpr.br.pucpr.gui.Panel;
@@ -23,9 +24,9 @@ public class App extends JComponent {
                 .add(lr);
 
         lr.setLayout(LayoutStrategy.LEFT_RIGHT)
-                .add(new Checkbox(10, 10, 20, 20))
-                .add(new Checkbox(10, 10, 30, 30))
-                .add(new Checkbox(10, 10, 60, 60));
+                .add(new Button(10, 10, 20, 20))
+                .add(new Button(10, 10, 30, 30))
+                .add(new Button(10, 10, 60, 60));
 
         rl.setLayout(LayoutStrategy.RIGHT_LEFT)
                 .add(new Checkbox(10, 10, 10, 10))

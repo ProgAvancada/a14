@@ -19,8 +19,15 @@ public class Button extends AbstractComponent {
 
     @Override
     public void paint(Graphics2D g) {
-        int t = isDown ? 220 : 255;
-        g.setColor(new Color(t,t,t));
+        g.setColor(isDown ? Color.BLACK : Color.WHITE);
+        g.drawLine(x, y, x+w, y);
+        g.drawLine(x, y, x, y+h);
+
+        g.setColor(isDown ? Color.WHITE : Color.BLACK);
+        g.drawLine(x, y+h, x+w, y+h);
+        g.drawLine(x+w, y, x+w, y+h);
+
+        g.setColor(Color.LIGHT_GRAY);
         g.fillRect(x, y, w, h);
 
     }
