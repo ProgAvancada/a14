@@ -5,8 +5,6 @@ import java.util.List;
 /**
  * Define as estrategias de layout que o painel utiliza. Cada item da enumeracao e um objeto, filho de LayoutStrategy.
  * Observe a sobrescrita do metodo adjust em cada filho, permitindo polimorfismo.
- *
- * Seria o equivalente a fazer uma superclasse LayoutStrategy e varias classes filhas, uma por objeto no enum.
  */
 public enum LayoutStrategy {
     TOP_DOWN {

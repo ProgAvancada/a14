@@ -23,20 +23,25 @@ public abstract class AbstractComponent implements Component {
         this.y = y;
     }
 
+    @Override
     public abstract void paint(Graphics2D g);
 
+    @Override
     public int getX() {
         return x;
     }
 
+    @Override
     public int getY() {
         return y;
     }
 
+    @Override
     public int getW() {
         return w;
     }
 
+    @Override
     public int getH() {
         return h;
     }
@@ -79,6 +84,7 @@ public abstract class AbstractComponent implements Component {
                 && e.getY() > y && e.getY() < getY2();
     }
 
+    @Override
     public boolean isHovered() {
         return isHovered;
     }

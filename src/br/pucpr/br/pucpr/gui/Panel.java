@@ -1,9 +1,9 @@
 package br.pucpr.br.pucpr.gui;
 
-import java.util.List;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe do painel. Utiliza o padrao Strategy, ao implementar a interface Component. Como todo painel e um componente
@@ -24,11 +24,19 @@ public class Panel implements Component{
         this.h = h;
     }
 
+    @Override
     public void setPosition(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
+    /**
+     * Adiciona um componente ao painel. A posicao x e y do componente será alterada no momento do desenho, de acordo
+     * com o layout definido para o painel.
+     * @param c O componente
+     * @return O proprio painel. Essa e uma tecnica conhecida como Method Chaining. Isso permite que o add seja
+     * chamado na forma painel.add(c1).add(c2). O metodo setLayout tambem a utiliza.
+     */
     public Panel add(Component c) {
         components.add(c);
         return this;
@@ -123,8 +131,9 @@ public class Panel implements Component{
         }
     }
 
-    public void setLayout(LayoutStrategy layout) {
+    public Panel setLayout(LayoutStrategy layout) {
         this.layout = layout;
+        return this;
     }
 
     public LayoutStrategy getLayout() {
