@@ -18,6 +18,8 @@ public class Checkbox extends AbstractComponent {
 
         if (checked) {
             g.setColor(Color.GREEN.darker());
+            g.fillRect(x, y, w, h);
+            g.setColor(Color.WHITE);
             g.setStroke(new BasicStroke(2));
             Path2D check = new Path2D.Float();
             check.moveTo(x + 0.2*w, y + 0.6*h);
