@@ -15,3 +15,6 @@ pode ser agrupado dentro de outros paineis.
 
 Também utilizamos uma técnica chamada Method Chaining nos métodos add e setLayout do painel para permitir chamadas 
 como: painel.add(button).add(button2); Veja o exemplo no metodo construtor da classe App.
+
+Embora não visto em aula, neste projeto inclui melhorias no desenho dos componentes. Isso permitirá visualizar melhor o 
+resultado da próxima atividade. 

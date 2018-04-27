@@ -11,8 +11,8 @@ import java.awt.*;
 public class App extends JComponent {
 
     private Panel main = new Panel(10, 10, 400, 400);
-    private Panel rl = new Panel(0,0, 400, 150);
-    private Panel lr = new Panel(0,0, 400, 150);
+    private Panel rl = new Panel(0,0, 300, 150);
+    private Panel lr = new Panel(0,0, 300, 150);
 
     public App() {
         addMouseMotionListener(main);
@@ -23,15 +23,17 @@ public class App extends JComponent {
                 .add(rl)
                 .add(lr);
 
-        lr.setLayout(LayoutStrategy.LEFT_RIGHT)
-                .add(new Button(10, 10, 20, 20))
-                .add(new Button(10, 10, 30, 30))
-                .add(new Button(10, 10, 60, 60));
-
+        //Painel da direita para esquerda com 3 checkboxes
         rl.setLayout(LayoutStrategy.RIGHT_LEFT)
                 .add(new Checkbox(10, 10, 10, 10))
                 .add(new Checkbox(10, 10, 40, 40))
                 .add(new Checkbox(10, 10, 50, 50));
+
+        //Painel da esquerda para a direita com 3 botões
+        lr.setLayout(LayoutStrategy.LEFT_RIGHT)
+                .add(new Button(10, 10, 20, 20))
+                .add(new Button(10, 10, 30, 30))
+                .add(new Button(10, 10, 60, 60));
     }
 
 
@@ -39,6 +41,7 @@ public class App extends JComponent {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
+        //Observe que só o painel principal é desenhado. Os demais serão comandados através do composite.
         Graphics2D g2d = (Graphics2D) g.create();
         main.paint(g2d);
         g2d.dispose();
