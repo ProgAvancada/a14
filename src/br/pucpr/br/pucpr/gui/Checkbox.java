@@ -13,6 +13,9 @@ public class Checkbox extends AbstractComponent {
 
     @Override
     public void paint(Graphics2D g) {
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, w, h);
+
         if (checked) {
             g.setColor(Color.GREEN.darker());
             g.setStroke(new BasicStroke(2));
@@ -22,9 +25,7 @@ public class Checkbox extends AbstractComponent {
             check.lineTo(x + 0.8*w, y + 0.2*h);
             g.draw(check);
         }
-        g.setStroke(new BasicStroke(1));
-        g.setColor(Color.BLACK);
-        g.drawRect(x, y, w, h);
+
     }
 
     @Override

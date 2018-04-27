@@ -67,7 +67,7 @@ public class Panel implements Component{
         layout.adjust(components, this);
         for (Component c : components) {
             Graphics2D g2d = (Graphics2D) g.create();
-            c.paint(g);
+            c.paint(g2d);
             g2d.dispose();
         }
     }
